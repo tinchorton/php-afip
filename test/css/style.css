@@ -1,0 +1,97 @@
+body
+{
+    font-family: Helvetica, Arial;
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px;
+    color: #888888;
+}
+
+table
+{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+caption
+{
+    font-weight: bolder;
+}
+
+th, td
+{
+    vertical-align: top;
+    padding: 10px;
+    max-width: 500px;
+}
+
+pre
+{
+    font-size: 0.7em;
+    font-family: monospace, "Courier New", Courier;
+    color: #3333aa;
+    padding: 1em;
+    margin: 1.5em;
+    border-radius: 0.5em;
+    border: 1px solid #8888aa;
+    word-wrap: break-word;
+}
+
+h1
+{
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+h2
+{
+    color: #444444;
+    margin: 0;
+    padding: 0;
+}
+
+h3, h4, h5
+{
+    color: #666666;
+    margin: 6px 0;
+    padding: 0;
+}
+
+hr
+{
+    border: 1px solid gray;
+    border-width: 0 0 1px 0;
+}
+
+a
+{
+    color: blue;
+    text-decoration: none;
+}
+
+
+.label
+{
+    margin-top: 10px;
+    padding: 10px 0;
+    border-top:1px solid gray;
+}
+
+.home_link
+{
+    border:1px solid gray;
+    border-radius: 0.3em;
+    text-align: right;
+    padding: 5px 10px;
+    margin: 5px 5px 15px 5px;
+}
+
+.err
+{
+    color: red;
+}
+.msg
+{
+    color: blue;
+}

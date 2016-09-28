@@ -1,0 +1,479 @@
+Array
+(
+    [0] => struct FECAESolicitar {
+ FEAuthRequest Auth;
+ FECAERequest FeCAEReq;
+}
+    [1] => struct FEAuthRequest {
+ string Token;
+ string Sign;
+ string Cuit;
+}
+    [2] => struct FECAERequest {
+ FECAECabRequest FeCabReq;
+ ArrayOfFECAEDetRequest FeDetReq;
+}
+    [3] => struct FECAECabRequest {
+}
+    [4] => struct FECabRequest {
+ int CantReg;
+ int PtoVta;
+ int CbteTipo;
+}
+    [5] => struct ArrayOfFECAEDetRequest {
+ FECAEDetRequest FECAEDetRequest;
+}
+    [6] => struct FECAEDetRequest {
+}
+    [7] => struct FEDetRequest {
+ int Concepto;
+ int DocTipo;
+ string DocNro;
+ string CbteDesde;
+ string CbteHasta;
+ string CbteFch;
+ double ImpTotal;
+ double ImpTotConc;
+ double ImpNeto;
+ double ImpOpEx;
+ double ImpTrib;
+ double ImpIVA;
+ string FchServDesde;
+ string FchServHasta;
+ string FchVtoPago;
+ string MonId;
+ double MonCotiz;
+ ArrayOfCbteAsoc CbtesAsoc;
+ ArrayOfTributo Tributos;
+ ArrayOfAlicIva Iva;
+ ArrayOfOpcional Opcionales;
+}
+    [8] => struct ArrayOfCbteAsoc {
+ CbteAsoc CbteAsoc;
+}
+    [9] => struct CbteAsoc {
+ int Tipo;
+ int PtoVta;
+ string Nro;
+}
+    [10] => struct ArrayOfTributo {
+ Tributo Tributo;
+}
+    [11] => struct Tributo {
+ short Id;
+ string Desc;
+ double BaseImp;
+ double Alic;
+ double Importe;
+}
+    [12] => struct ArrayOfAlicIva {
+ AlicIva AlicIva;
+}
+    [13] => struct AlicIva {
+ int Id;
+ double BaseImp;
+ double Importe;
+}
+    [14] => struct ArrayOfOpcional {
+ Opcional Opcional;
+}
+    [15] => struct Opcional {
+ string Id;
+ string Valor;
+}
+    [16] => struct FECAESolicitarResponse {
+ FECAEResponse FECAESolicitarResult;
+}
+    [17] => struct FECAEResponse {
+ FECAECabResponse FeCabResp;
+ ArrayOfFECAEDetResponse FeDetResp;
+ ArrayOfEvt Events;
+ ArrayOfErr Errors;
+}
+    [18] => struct FECAECabResponse {
+}
+    [19] => struct FECabResponse {
+ string Cuit;
+ int PtoVta;
+ int CbteTipo;
+ string FchProceso;
+ int CantReg;
+ string Resultado;
+ string Reproceso;
+}
+    [20] => struct ArrayOfFECAEDetResponse {
+ FECAEDetResponse FECAEDetResponse;
+}
+    [21] => struct FECAEDetResponse {
+ string CAE;
+ string CAEFchVto;
+}
+    [22] => struct FEDetResponse {
+ int Concepto;
+ int DocTipo;
+ string DocNro;
+ string CbteDesde;
+ string CbteHasta;
+ string CbteFch;
+ string Resultado;
+ ArrayOfObs Observaciones;
+}
+    [23] => struct ArrayOfObs {
+ Obs Obs;
+}
+    [24] => struct Obs {
+ int Code;
+ string Msg;
+}
+    [25] => struct ArrayOfEvt {
+ Evt Evt;
+}
+    [26] => struct Evt {
+ int Code;
+ string Msg;
+}
+    [27] => struct ArrayOfErr {
+ Err Err;
+}
+    [28] => struct Err {
+ int Code;
+ string Msg;
+}
+    [29] => struct FECompTotXRequest {
+ FEAuthRequest Auth;
+}
+    [30] => struct FECompTotXRequestResponse {
+ FERegXReqResponse FECompTotXRequestResult;
+}
+    [31] => struct FERegXReqResponse {
+ int RegXReq;
+ ArrayOfErr Errors;
+ ArrayOfEvt Events;
+}
+    [32] => struct FEDummy {
+}
+    [33] => struct FEDummyResponse {
+ DummyResponse FEDummyResult;
+}
+    [34] => struct DummyResponse {
+ string AppServer;
+ string DbServer;
+ string AuthServer;
+}
+    [35] => struct FECompUltimoAutorizado {
+ FEAuthRequest Auth;
+ int PtoVta;
+ int CbteTipo;
+}
+    [36] => struct FECompUltimoAutorizadoResponse {
+ FERecuperaLastCbteResponse FECompUltimoAutorizadoResult;
+}
+    [37] => struct FERecuperaLastCbteResponse {
+ int PtoVta;
+ int CbteTipo;
+ int CbteNro;
+ ArrayOfErr Errors;
+ ArrayOfEvt Events;
+}
+    [38] => struct FECompConsultar {
+ FEAuthRequest Auth;
+ FECompConsultaReq FeCompConsReq;
+}
+    [39] => struct FECompConsultaReq {
+ int CbteTipo;
+ string CbteNro;
+ int PtoVta;
+}
+    [40] => struct FECompConsultarResponse {
+ FECompConsultaResponse FECompConsultarResult;
+}
+    [41] => struct FECompConsultaResponse {
+ FECompConsResponse ResultGet;
+ ArrayOfErr Errors;
+ ArrayOfEvt Events;
+}
+    [42] => struct FECompConsResponse {
+ string Resultado;
+ string CodAutorizacion;
+ string EmisionTipo;
+ string FchVto;
+ string FchProceso;
+ ArrayOfObs Observaciones;
+ int PtoVta;
+ int CbteTipo;
+}
+    [43] => struct FECAEARegInformativo {
+ FEAuthRequest Auth;
+ FECAEARequest FeCAEARegInfReq;
+}
+    [44] => struct FECAEARequest {
+ FECAEACabRequest FeCabReq;
+ ArrayOfFECAEADetRequest FeDetReq;
+}
+    [45] => struct FECAEACabRequest {
+}
+    [46] => struct ArrayOfFECAEADetRequest {
+ FECAEADetRequest FECAEADetRequest;
+}
+    [47] => struct FECAEADetRequest {
+ string CAEA;
+}
+    [48] => struct FECAEARegInformativoResponse {
+ FECAEAResponse FECAEARegInformativoResult;
+}
+    [49] => struct FECAEAResponse {
+ FECAEACabResponse FeCabResp;
+ ArrayOfFECAEADetResponse FeDetResp;
+ ArrayOfEvt Events;
+ ArrayOfErr Errors;
+}
+    [50] => struct FECAEACabResponse {
+}
+    [51] => struct ArrayOfFECAEADetResponse {
+ FECAEADetResponse FECAEADetResponse;
+}
+    [52] => struct FECAEADetResponse {
+ string CAEA;
+}
+    [53] => struct FECAEASolicitar {
+ FEAuthRequest Auth;
+ int Periodo;
+ short Orden;
+}
+    [54] => struct FECAEASolicitarResponse {
+ FECAEAGetResponse FECAEASolicitarResult;
+}
+    [55] => struct FECAEAGetResponse {
+ FECAEAGet ResultGet;
+ ArrayOfErr Errors;
+ ArrayOfEvt Events;
+}
+    [56] => struct FECAEAGet {
+ string CAEA;
+ int Periodo;
+ short Orden;
+ string FchVigDesde;
+ string FchVigHasta;
+ string FchTopeInf;
+ string FchProceso;
+}
+    [57] => struct FECAEASinMovimientoConsultar {
+ FEAuthRequest Auth;
+ string CAEA;
+ int PtoVta;
+}
+    [58] => struct FECAEASinMovimientoConsultarResponse {
+ FECAEASinMovConsResponse FECAEASinMovimientoConsultarResult;
+}
+    [59] => struct FECAEASinMovConsResponse {
+ ArrayOfFECAEASinMov ResultGet;
+ ArrayOfErr Errors;
+ ArrayOfEvt Events;
+}
+    [60] => struct ArrayOfFECAEASinMov {
+ FECAEASinMov FECAEASinMov;
+}
+    [61] => struct FECAEASinMov {
+ string CAEA;
+ string FchProceso;
+ int PtoVta;
+}
+    [62] => struct FECAEASinMovimientoInformar {
+ FEAuthRequest Auth;
+ int PtoVta;
+ string CAEA;
+}
+    [63] => struct FECAEASinMovimientoInformarResponse {
+ FECAEASinMovResponse FECAEASinMovimientoInformarResult;
+}
+    [64] => struct FECAEASinMovResponse {
+ string Resultado;
+ ArrayOfErr Errors;
+ ArrayOfEvt Events;
+}
+    [65] => struct FECAEAConsultar {
+ FEAuthRequest Auth;
+ int Periodo;
+ short Orden;
+}
+    [66] => struct FECAEAConsultarResponse {
+ FECAEAGetResponse FECAEAConsultarResult;
+}
+    [67] => struct FEParamGetCotizacion {
+ FEAuthRequest Auth;
+ string MonId;
+}
+    [68] => struct FEParamGetCotizacionResponse {
+ FECotizacionResponse FEParamGetCotizacionResult;
+}
+    [69] => struct FECotizacionResponse {
+ Cotizacion ResultGet;
+ ArrayOfErr Errors;
+ ArrayOfEvt Events;
+}
+    [70] => struct Cotizacion {
+ string MonId;
+ double MonCotiz;
+ string FchCotiz;
+}
+    [71] => struct FEParamGetTiposTributos {
+ FEAuthRequest Auth;
+}
+    [72] => struct FEParamGetTiposTributosResponse {
+ FETributoResponse FEParamGetTiposTributosResult;
+}
+    [73] => struct FETributoResponse {
+ ArrayOfTributoTipo ResultGet;
+ ArrayOfErr Errors;
+ ArrayOfEvt Events;
+}
+    [74] => struct ArrayOfTributoTipo {
+ TributoTipo TributoTipo;
+}
+    [75] => struct TributoTipo {
+ short Id;
+ string Desc;
+ string FchDesde;
+ string FchHasta;
+}
+    [76] => struct FEParamGetTiposMonedas {
+ FEAuthRequest Auth;
+}
+    [77] => struct FEParamGetTiposMonedasResponse {
+ MonedaResponse FEParamGetTiposMonedasResult;
+}
+    [78] => struct MonedaResponse {
+ ArrayOfMoneda ResultGet;
+ ArrayOfErr Errors;
+ ArrayOfEvt Events;
+}
+    [79] => struct ArrayOfMoneda {
+ Moneda Moneda;
+}
+    [80] => struct Moneda {
+ string Id;
+ string Desc;
+ string FchDesde;
+ string FchHasta;
+}
+    [81] => struct FEParamGetTiposIva {
+ FEAuthRequest Auth;
+}
+    [82] => struct FEParamGetTiposIvaResponse {
+ IvaTipoResponse FEParamGetTiposIvaResult;
+}
+    [83] => struct IvaTipoResponse {
+ ArrayOfIvaTipo ResultGet;
+ ArrayOfErr Errors;
+ ArrayOfEvt Events;
+}
+    [84] => struct ArrayOfIvaTipo {
+ IvaTipo IvaTipo;
+}
+    [85] => struct IvaTipo {
+ string Id;
+ string Desc;
+ string FchDesde;
+ string FchHasta;
+}
+    [86] => struct FEParamGetTiposOpcional {
+ FEAuthRequest Auth;
+}
+    [87] => struct FEParamGetTiposOpcionalResponse {
+ OpcionalTipoResponse FEParamGetTiposOpcionalResult;
+}
+    [88] => struct OpcionalTipoResponse {
+ ArrayOfOpcionalTipo ResultGet;
+ ArrayOfErr Errors;
+ ArrayOfEvt Events;
+}
+    [89] => struct ArrayOfOpcionalTipo {
+ OpcionalTipo OpcionalTipo;
+}
+    [90] => struct OpcionalTipo {
+ string Id;
+ string Desc;
+ string FchDesde;
+ string FchHasta;
+}
+    [91] => struct FEParamGetTiposConcepto {
+ FEAuthRequest Auth;
+}
+    [92] => struct FEParamGetTiposConceptoResponse {
+ ConceptoTipoResponse FEParamGetTiposConceptoResult;
+}
+    [93] => struct ConceptoTipoResponse {
+ ArrayOfConceptoTipo ResultGet;
+ ArrayOfErr Errors;
+ ArrayOfEvt Events;
+}
+    [94] => struct ArrayOfConceptoTipo {
+ ConceptoTipo ConceptoTipo;
+}
+    [95] => struct ConceptoTipo {
+ int Id;
+ string Desc;
+ string FchDesde;
+ string FchHasta;
+}
+    [96] => struct FEParamGetPtosVenta {
+ FEAuthRequest Auth;
+}
+    [97] => struct FEParamGetPtosVentaResponse {
+ FEPtoVentaResponse FEParamGetPtosVentaResult;
+}
+    [98] => struct FEPtoVentaResponse {
+ ArrayOfPtoVenta ResultGet;
+ ArrayOfErr Errors;
+ ArrayOfEvt Events;
+}
+    [99] => struct ArrayOfPtoVenta {
+ PtoVenta PtoVenta;
+}
+    [100] => struct PtoVenta {
+ short Nro;
+ string EmisionTipo;
+ string Bloqueado;
+ string FchBaja;
+}
+    [101] => struct FEParamGetTiposCbte {
+ FEAuthRequest Auth;
+}
+    [102] => struct FEParamGetTiposCbteResponse {
+ CbteTipoResponse FEParamGetTiposCbteResult;
+}
+    [103] => struct CbteTipoResponse {
+ ArrayOfCbteTipo ResultGet;
+ ArrayOfErr Errors;
+ ArrayOfEvt Events;
+}
+    [104] => struct ArrayOfCbteTipo {
+ CbteTipo CbteTipo;
+}
+    [105] => struct CbteTipo {
+ int Id;
+ string Desc;
+ string FchDesde;
+ string FchHasta;
+}
+    [106] => struct FEParamGetTiposDoc {
+ FEAuthRequest Auth;
+}
+    [107] => struct FEParamGetTiposDocResponse {
+ DocTipoResponse FEParamGetTiposDocResult;
+}
+    [108] => struct DocTipoResponse {
+ ArrayOfDocTipo ResultGet;
+ ArrayOfErr Errors;
+ ArrayOfEvt Events;
+}
+    [109] => struct ArrayOfDocTipo {
+ DocTipo DocTipo;
+}
+    [110] => struct DocTipo {
+ int Id;
+ string Desc;
+ string FchDesde;
+ string FchHasta;
+}
+)

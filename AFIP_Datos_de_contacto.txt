@@ -1,0 +1,20 @@
+Consultas WS AFIP General   
+    webservices@afip.gov.ar 
+    4347-1219 / 1213    
+
+Consultas WS AFIP WsFev1 Homologacion   
+    wsfev1@afip.gov.ar      
+
+Consultas WS AFIP WsFev1 Produccion 
+    sri@afip.gov.ar 
+    0800-333-6372   
+
+Consultas WS    
+    webservices@afip.gob.ar     
+
+Factura Electronica 
+    facturaelectronica@afip.gov.ar      
+
+Mesa de Ayuda Dependencias  
+    sri@afip.gob.ar     
+

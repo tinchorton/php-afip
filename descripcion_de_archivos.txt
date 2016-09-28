@@ -1,0 +1,74 @@
+﻿Descripcion de los archivos
+===========================
+
+
+
+fe/config.php //Diferentes configuraciones mediante constantes para establecer el entorno y los diferentes paths
+
+    
+fe/afip: //Clases propias del webservice
+        
+AfipWsaa.php //Clase que se encarga de hacer el login a AFIP y de guardar los TRA y los TAs 
+        
+AfipWsfev1.php //Clase que se encarga de gestionar FE y consultar datos del WS
+        
+        
+fe/afip/wsfiles: //Esta carpeta debe mantener el nombre (wsfiles) y estar en la misma carpeta en la que se encuentran las clases (Ej. afip)
+            
+emp1_test.crt //Certificado de la empresa [emp1]
+            
+emp1_test.key //Requerido por el WSAA para la autenticacion [emp1]
+            
+emp1_test.ped //Archivo que genera el certificado de la empresa [emp1]
+            
+wsaa.wsdl //Estructura WSDL del WSAA 
+            
+wsfe_v1.wsdl //Estructura WSDL del WSFEv1
+            
+wsfex_v1.wsdl //Estructura WSDL del WSFEXv1
+            
+wsmtxca_v1.wsdl //Estructura WSDL del WSMTXCAv1
+
+            
+/**
+             
+* Los archivos emp1_* son propios de cada empresa y estan relacionados con los certificados
+             *
+             
+* Estos archivos se deben generar en el equipo/server porque relacionan el equipo con la CUIT en AFIP. 
+             *
+             
+* Para generar estos archivos hay instructivos ubicados en la carpeta fe/docs/
+             *
+             
+* emp1 Es un alias de la empresa que va a implementar la facturacion
+             *
+             
+*/
+
+    
+fe/test:
+        index.html //Gestion de test de cada WS
+
+    
+fe/docs: //Documentacion general
+        
+ADMINREL.DelegarWS.pdf //Delegación de Webservices AFIP
+        Estructura de Datos del Request de WSFEv1.docx //Referencia a los datos que recibe/entregan las clases de los WS
+        Generar Certificados para factura electronica.docx //Instructivo para generar los certificados
+        
+manual_desarrollador_COMPG_v2.pdf //Manual publicado por AFIP con toda la explicacion de WSFEv1. Incluye referencia a errores y comentarios, y ademas muestra las estructuras XML
+        
+WSAA.ObtenerCertificado.pdf //Generación de Certificados Digitales para Utilización con Webservices AFIP
+
+
+    
+fe/library: //Scripts y Clases de libreria que utilizan las clases de WS y los scripts de test
+        ErrorLog.php 
+        functions.php
+
+    
+fe/tmp: //Esta carpeta es utilizada para los logs de las tareas que realiza el WS, y tambien se guardan los TRA y los TAs generados por el WSAA
+    //La carpeta debe tener permisos de lectura y escritura para el user que corre el service de Apache
+
+
