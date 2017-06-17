@@ -17,7 +17,7 @@ serialNumber = Enter your CUIT
 
 Una vez grabados los cambios, abra una ventana de DOS/Terminal y posiciónese en C:\OpenSSL\Bin y o ruta similar en Linux y tipee los siguientes comandos respetando los espacios:
 
-openssl genrsa -out privada 1024 (genera su clave privada)
+openssl genrsa -out privada 2048 (genera su clave privada)
 openssl req -new -key privada -out pedido (genera el CSR)
 
 Al ejecutar este Ultimo comando aparecerá un cuestionario que debe completar de la siguiente manera
